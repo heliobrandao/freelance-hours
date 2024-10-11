@@ -1,5 +1,5 @@
 <div>
-    <livewire:projects.show
-        :p="request()->route('project')"
-    />
+    <livewire:projects.show :$project />
+
+    <livewire:projects.proposals :$project />
 </div>
