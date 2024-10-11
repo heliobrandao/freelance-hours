@@ -3,6 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 
-Route::get('/', \App\Http\Controllers\WelcomeController::class);
+Route::view('/', 'projects.index')->name('projects.index');
 
-Route::get('/outra',  fn() => 'oi meu!');
+Route::view('/project/{project}', 'projects.show')->name('projects.show');
