@@ -16,7 +16,11 @@
 
     <div class="py-4">
         <div class="flex flex-col gap-7">
+<<<<<<< HEAD
             @foreach($proposals->take(10) as $proposal)
+=======
+            @foreach($proposals->slice(10) as $proposal)
+>>>>>>> be668de (Refactored project with modifications)
                 <x-proposals.item :$proposal :position="$loop->index"/>
             @endforeach
         </div>

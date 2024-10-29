@@ -8,7 +8,11 @@
             <x-proposals.position :$position/>
         </div>
         <div>
+<<<<<<< HEAD
             <div class="text-white text-[14px] font-bold tracking-wide truncate w-[140px]" >
+=======
+            <div class="text-white text-[14px] font-bold tracking-wide truncate w-[140px]">
+>>>>>>> be668de (Refactored project with modifications)
                 {{ $proposal->email }}
             </div>
             <div class="text-[#8C8C9A] text-[12px]">

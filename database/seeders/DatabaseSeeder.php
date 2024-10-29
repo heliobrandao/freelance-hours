@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+<<<<<<< HEAD
         // User::factory(10)->create();
 
         User::factory()
@@ -26,6 +27,13 @@ class DatabaseSeeder extends Seeder
                 $project = Project::factory()->create(['created_by' => $user->id]);
 
                 Proposal::factory()->count(random_int(4,45))->create(['project_id' => $project->id]);
+=======
+        User::factory()->count(200)->create();
+        User::query()->inRandomOrder()->limit(10)->get()
+            ->each(function (User $u) {
+                $project = Project::factory()->create(['created_by' => $u->id]);
+                Proposal::factory()->count(random_int(4, 45))->create(['project_id' => $project->id]);
+>>>>>>> be668de (Refactored project with modifications)
             });
     }
 }
